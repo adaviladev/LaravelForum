@@ -9,7 +9,8 @@
 		<div class="list-group">
 			@foreach( $threads as $thread )
 				<a href="/threads/{{ $thread->id }}" class="list-group-item">
-					{{ $thread->title }} <span class="pull-right">{{ $thread->id }}</span>
+					{{ $thread->title }}
+					<span class="pull-right">{{ count( $thread->comments ) }}</span>
 				</a>
 			@endforeach
 		</div>

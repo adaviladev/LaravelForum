@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ForumController extends Controller {
 	public function index() {
-		$threads = Thread::get();
+		$threads = Thread::get()->load( 'comments' );
 
 		return view( 'pages.welcome' , compact( 'threads' ) );
 	}
