@@ -12,14 +12,15 @@
 			</div>
 
 			@unless( empty( $user->comments ) )
-				<div class="list-group">
+				<ul class="list-group">
 					@foreach( $user->comments as $comment )
-						<a href="/threads/{{ $comment->id }}" class="list-group-item">
-							{{ $comment->body }}
+						<li class="list-group-item">
+							<h2><a href="/threads/{{ $comment->thread_id }}">{{ $comment->thread->title }}</a></h2>
+							<a href="/threads/{{ $comment->thread_id }}#{{ $comment->id }}">{{ $comment->body }}</a>
 							<span class="pull-right">{{ $comment->id }}</span>
-						</a>
+						</li>
 					@endforeach
-				</div>
+				</ul>
 			@endunless
 		</div>
 	</div>

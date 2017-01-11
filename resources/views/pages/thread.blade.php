@@ -3,10 +3,14 @@
 @section( 'content' )
 	<div class="container">
 		<h1>{{ $thread->title }}</h1>
+
+		<p>
+			{{ $thread->body }}
+		</p>
 		@unless( empty( $thread->comments ))
 			<div class="list-group col-md-12">
 				@foreach( $thread->comments as $comment )
-					<div class="list-group-item">
+					<div id="{{ $comment->id }}" class="list-group-item">
 						<div class="row">
 							<div class="container-fluid">
 								{{ $comment->user->first_name }}

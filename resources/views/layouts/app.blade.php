@@ -32,6 +32,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="js/app.js"></script>
+<script src="js/all.min.js"></script>
 </body>
 </html>
