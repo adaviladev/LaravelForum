@@ -6,6 +6,7 @@
 	</div>
 
 	@unless( empty( $threads ) )
+		<h1>Open Threads</h1>
 		<div class="list-group">
 			@foreach( $threads as $thread )
 				<a href="/threads/{{ $thread->id }}" class="list-group-item">

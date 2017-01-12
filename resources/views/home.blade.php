@@ -18,10 +18,17 @@
 							<h2><a href="/threads/{{ $comment->thread_id }}">{{ $comment->thread->title }}</a></h2>
 							<a href="/threads/{{ $comment->thread_id }}#{{ $comment->id }}">{{ $comment->body }}</a>
 							<span class="pull-right">{{ $comment->id }}</span>
+							<div class="clearfix">
+								<div class="pull-right"><a href="/comment/delete/{{ $comment->thread_id }}">Delete</a></div>
+							</div>
 						</li>
 					@endforeach
 				</ul>
 			@endunless
 		</div>
 	</div>
+@endsection
+
+@section( 'test' )
+	<p>Test field</p>
 @endsection

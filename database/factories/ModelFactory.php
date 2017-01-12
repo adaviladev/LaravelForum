@@ -27,8 +27,9 @@
 
 	$factory->define( App\Thread::class , function ( Faker\Generator $faker ) {
 		return [
-			'title'   => implode( ' ' , $faker->words( 5 ) ) ,
+			'title'   => implode( ' ' , $faker->( 5 ) ) ,
 			'body'    => implode( ' ' , $faker->sentences( rand( 3 , 6 ) ) ) ,
+			'status'  => 'published' ,
 			'user_id' => rand( 1 , 5 )
 		];
 	} );
@@ -37,6 +38,7 @@
 		return [
 			'body'      => implode( ' ' , $faker->sentences( rand( 3 , 6 ) ) ) ,
 			'thread_id' => rand( 1 , 20 ) ,
+			'status'  => 'published' ,
 			'user_id'   => rand( 1 , 5 )
 		];
 	} );

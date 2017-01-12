@@ -16,6 +16,7 @@ class CreateCommentsTable extends Migration {
 			$table->longText( 'body' );
 			$table->integer( 'user_id' );
 			$table->integer( 'thread_id' );
+			$table->string( 'status' );
 			$table->timestamps();
 		} );
 	}
